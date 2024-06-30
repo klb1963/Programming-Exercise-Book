@@ -8,7 +8,6 @@ package bar_code;
 //- controlSum(long code), который возвращает сумму всех цифр штрих кода
 //- isValid(long code), который проверяет штрих-код на правильное количество цифр
 
-
 public class BarCode {
 
     //field
@@ -35,44 +34,7 @@ public class BarCode {
                 '}';
     }
 
-    //lengthCode
-    public int lengthCode() {
-        long temp = barCode;
-        // calculate length
-        int length = 0;
-        while (barCode > 0) {
-            barCode = barCode / 10; // целочисленное деление
-            length++;
-        }
-        barCode = temp;
-        return length;
-    }
-
-    // controlSum()
-    public int controlSum() {
-        long temp = barCode;
-        int digit = 0;
-        // calculate sum
-        int sum = 0;
-        while (barCode > 0) {
-            digit = (int) (barCode % 10); // целочисленное деление с остатком
-            barCode = barCode / 10; // целочисленное деление
-            sum += digit;
-        }
-        barCode = temp;
-        return sum;
-    }
-
-    // isValid
-    public boolean isValid() {
-        if (lengthCode() == 13) {
-            return true;
-        } else return false;
-    }
-
-    // вариант с методами, которые получают на вход long code
-
-    //lengthCode
+    //lengthCode(long code)
     public int lengthCode(long code) {
         // calculate length
         int length = 0;
@@ -103,4 +65,39 @@ public class BarCode {
         } else return false;
     }
 
+    // methods - no argument
+    //lengthCode()
+    public int lengthCode() {
+        long temp = barCode;
+        // calculate length
+        int length = 0;
+        while (barCode > 0) {
+            barCode = barCode / 10; // целочисленное деление
+            length++;
+        }
+        barCode = temp;
+        return length;
+    }
+
+    // controlSum()
+    public int controlSum() {
+        long temp = barCode;
+        int digit = 0;
+        // calculate sum
+        int sum = 0;
+        while (barCode > 0) {
+            digit = (int) (barCode % 10); // целочисленное деление с остатком
+            barCode = barCode / 10; // целочисленное деление
+            sum += digit;
+        }
+        barCode = temp;
+        return sum;
+    }
+
+    // isValid()
+    public boolean isValid() {
+        if (lengthCode() == 13) {
+            return true;
+        } else return false;
+    }
 }
