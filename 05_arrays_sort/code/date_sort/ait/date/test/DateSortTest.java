@@ -1,4 +1,4 @@
-package ait.date.test;
+package date_sort.ait.date.test;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
