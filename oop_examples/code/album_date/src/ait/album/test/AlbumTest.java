@@ -1,9 +1,8 @@
-package album.test;
+package album_date.src.ait.album.test;
 
-import album.dao.Album;
-import album.dao.AlbumDateSortedImpl;
-import album.model.Photo;
-import org.junit.jupiter.api.Assertions;
+import album_date.src.ait.album.dao.Album;
+import album_date.src.ait.album.dao.AlbumDateSortedImpl;
+import album_date.src.ait.album.model.Photo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -61,12 +60,12 @@ class AlbumTest {
     @Test
     void updatePhoto() {
         assertTrue(album.updatePhoto(1, 1, "newUrl"));
-        Assertions.assertEquals("newUrl", album.getPhotoFromAlbum(1, 1).getUrl());
+        assertEquals("newUrl", album.getPhotoFromAlbum(1, 1).getUrl());
     }
 
     @Test
     void getPhotoFromAlbum() {
-        Assertions.assertEquals(photos[0], album.getPhotoFromAlbum(1, 1));
+        assertEquals(photos[0], album.getPhotoFromAlbum(1, 1));
         assertNull(album.getPhotoFromAlbum(1, 5));
     }
 

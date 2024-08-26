@@ -1,4 +1,4 @@
-package album.model;
+package album_date.src.ait.album.model;
 
 import java.time.LocalDateTime;
 
