@@ -4,10 +4,27 @@ import java.util.Objects;
 
 public class Response {
 
+    //fields
     private String message;
+    private String additionalMessage;
 
+    //constructors
     public Response(String message) {
         this.message = message;
+    }
+
+    public Response(String message, String additionalMessage) {
+        this.message = message;
+        this.additionalMessage = additionalMessage;
+    }
+
+    // getters
+    public String getMessage() {
+        return message;
+    }
+
+    public String getAdditionalMessage() {
+        return additionalMessage;
     }
 
     @Override
@@ -24,6 +41,8 @@ public class Response {
 
     @Override
     public String toString() {
-        return "Response: message - " + message;
+        return String.format("Response: message - %s%s",
+                message,
+                additionalMessage == null ? "" : ", additionalMessage: " + additionalMessage);
     }
 }

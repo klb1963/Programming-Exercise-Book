@@ -11,6 +11,7 @@ import java.util.function.Predicate;
 public class AlbumDateSortedImpl implements Album {
     private Photo[] photos;
     private int size;
+
     private Comparator<Photo> comparator = (p1, p2) -> {
         int res = p1.getDate().compareTo(p2.getDate());
         return res != 0 ? res : Integer.compare(p1.getAlbumId(), p2.getAlbumId());

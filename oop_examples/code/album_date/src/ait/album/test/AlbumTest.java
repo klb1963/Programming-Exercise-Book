@@ -40,6 +40,9 @@ class AlbumTest {
 
     @Test
     void addPhoto() {
+//        System.out.println(photos[0].getDate());
+//        System.out.println(photos[0].toString());
+//        System.out.println("-----------------------------");
         assertFalse(album.addPhoto(null));
         assertFalse(album.addPhoto(photos[1]));
         Photo photo = new Photo(1, 5, "title5", "url5", now.minusDays(3));

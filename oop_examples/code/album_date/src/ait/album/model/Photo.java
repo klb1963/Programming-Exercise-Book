@@ -2,7 +2,7 @@ package album_date.src.ait.album.model;
 
 import java.time.LocalDateTime;
 
-public class Photo {
+public class Photo implements Comparable<Photo>{
     private int albumId;
     private int photoId;
     private String title;
@@ -70,5 +70,10 @@ public class Photo {
         int result = albumId;
         result = 31 * result + photoId;
         return result;
+    }
+
+    @Override
+    public int compareTo(Photo o) {
+        return this.getDate().compareTo(o.getDate());
     }
 }

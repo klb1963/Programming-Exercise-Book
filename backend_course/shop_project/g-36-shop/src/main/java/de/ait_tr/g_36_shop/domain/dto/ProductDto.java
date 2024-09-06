@@ -22,6 +22,16 @@ public class ProductDto {
     @Schema(description = "Product price", example = "190.00") // add for Swagger
     private BigDecimal price;
 
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public Long getId() {
         return id;
     }
@@ -50,12 +60,12 @@ public class ProductDto {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ProductDto that)) return false;
-        return Objects.equals(id, that.id) && Objects.equals(title, that.title) && Objects.equals(price, that.price);
+        return Objects.equals(id, that.id) && Objects.equals(title, that.title) && Objects.equals(price, that.price) && Objects.equals(image, that.image);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, price);
+        return Objects.hash(id, title, price, image);
     }
 
     @Override
