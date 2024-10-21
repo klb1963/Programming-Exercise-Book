@@ -15,7 +15,7 @@ public interface CarRepository {
     //update
     Car updateCar();
 
-    //delete, may be Car or boolean
+    //delete, may be CarNew or boolean
     void delete(Long id);
 
 }

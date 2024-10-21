@@ -27,7 +27,7 @@ A classic example of an application server that supports servlets is Apache Tomc
 The Java Servlet API is a standardized set of interfaces and classes that makes it possible to develop such web applications.
 Servlets run on the server and can handle client requests in the following ways:
 
-1. **Receive a request**: The client (usually a web browser) sends a request to the server where the servlet is hosted. This request can be triggered by various events, for example, a user can fill out a form on a web page and click the submit button.
+1. **Receive a request**: The client (usually a web browser) sends a request to the server where the servlet is hosted. This request can be triggered by various events, for example, a user_task can fill out a form on a web page and click the submit button.
 
 2. **Processing the request**: The servlet parses the received request, performs the necessary data processing or business logic, and prepares a response. This may include performing database operations, integrating with other web services, and so on.
 
@@ -39,7 +39,7 @@ The Dispatcher Servlet in the Spring Framework is a servlet that distributes req
 
 When a Spring web application receives an HTTP request, the Dispatcher Servlet determines which controller to route the request to. It bases its decision on configuration, which can be specified by annotations in code or in XML configuration files.
 
-Once the Dispatcher Servlet determines the appropriate controller, it forwards the request to that controller. The controller then processes the request, interacts with the necessary models (for example, to retrieve or update data), and returns the model and view that should be displayed. The Dispatcher Servlet then forwards this response back to the user, usually as an HTML page.
+Once the Dispatcher Servlet determines the appropriate controller, it forwards the request to that controller. The controller then processes the request, interacts with the necessary models (for example, to retrieve or update data), and returns the model and view that should be displayed. The Dispatcher Servlet then forwards this response back to the user_task, usually as an HTML page.
 
 In this way, the Dispatcher Servlet simplifies routing in Spring applications by providing a centralized place to manage all incoming HTTP requests.
 

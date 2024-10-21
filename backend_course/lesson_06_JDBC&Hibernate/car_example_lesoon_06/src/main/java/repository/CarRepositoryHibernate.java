@@ -42,7 +42,7 @@ public class CarRepositoryHibernate implements CarRepository{
     @Override
     public List<Car> getAll() {
         // TODO домашнее задание
-        return entityManager.createQuery("from Car", Car.class).getResultList();
+        return entityManager.createQuery("from CarNew", Car.class).getResultList();
     }
 
     @Override

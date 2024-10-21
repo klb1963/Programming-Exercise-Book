@@ -4,15 +4,15 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
 
-    <changeSet id="add-columns-email-and-active-to-user" author="Andrey">
+    <changeSet id="add-columns-email-and-active-to-user_task" author="Andrey">
 
-        <addColumn tableName="user">
+        <addColumn tableName="user_task">
             <column name="email" type="varchar(64)" defaultValue="test@test.com">
                 <constraints nullable="false"/>
             </column>
         </addColumn>
 
-        <addColumn tableName="user">
+        <addColumn tableName="user_task">
             <column name="active" type="boolean" defaultValue="false">
                 <constraints nullable="false"/>
             </column>

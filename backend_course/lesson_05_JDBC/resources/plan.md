@@ -62,8 +62,8 @@ Add a variable to the LOWER window (System variables)
 9. Launch the browser, go to the address
    http://localhpst:8080
    make a request from the browser address bar
-   http://localhpst:8080/cars
-   Get a list of cars available in the repository.
+   http://localhpst:8080/carNews
+   Get a list of carNews available in the repository.
 
 ## Topic of today's lesson:
 ### JDBC Technology
@@ -95,7 +95,7 @@ ___
 
 * HTTP - это протокол передачи ТЕКСТА поо сети Интернет
 * JSON - это файл специального формата {"key":"value"}
-* endpoint - это адрес на сервере для получения и взаимодействия по HTTP-протоколу (внутри url - небольшая часть /users, /cars)
+* endpoint - это адрес на сервере для получения и взаимодействия по HTTP-протоколу (внутри url - небольшая часть /users, /carNews)
 
 Методы для http-запросов:
 * GET
@@ -149,7 +149,7 @@ public class CarServlet extends HttpServlet - наследуемся, расши
 9. Запускаем браузер, переходим на адрес 
 http://localhpst:8080
 делаем запрос из адресной строки браузера
-http://localhpst:8080/cars
+http://localhpst:8080/carNews
 Получаем список имеющихся в репозитории автомобилей.
 
 ## Тема сегодняшнего занятия:

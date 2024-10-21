@@ -4,7 +4,7 @@
   <summary style="cursor: pointer; color: blue;"><b>English</b></summary>
 
 1. Implement CarRepositoryDB to the end. Implement methods:
-- getting all cars from the DB
+- getting all carNews from the DB
 - updating a car in the DB
 - deleting a car from the DB
 

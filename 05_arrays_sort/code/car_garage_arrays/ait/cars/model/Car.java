@@ -45,7 +45,7 @@ public class Car {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Car{");
+        final StringBuilder sb = new StringBuilder("CarNew{");
         sb.append("regNumber='").append(regNumber).append('\'');
         sb.append(", model='").append(model).append('\'');
         sb.append(", company='").append(company).append('\'');

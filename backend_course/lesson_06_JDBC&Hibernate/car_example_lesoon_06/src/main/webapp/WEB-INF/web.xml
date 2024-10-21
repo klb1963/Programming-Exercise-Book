@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>carServlet</servlet-name>
-        <url-pattern>/cars</url-pattern>
+        <url-pattern>/carNews</url-pattern>
     </servlet-mapping>
 
 </web-app>

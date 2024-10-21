@@ -48,7 +48,7 @@ public class CarServlet extends HttpServlet {
         } else {
             Long id = Long.parseLong(params.get("id")[0]);
             Car car = service.getById(id);
-            resp.getWriter().write(car == null ? "Car not found" : car.toString()); // пишем просто строку, но можем и JSON при помощи ObjectMapper
+            resp.getWriter().write(car == null ? "CarNew not found" : car.toString()); // пишем просто строку, но можем и JSON при помощи ObjectMapper
         }
 
     }

@@ -24,7 +24,7 @@ What does JDBC provide us?
 1. We create a CarRepositoryDB, in it we make a getConnection method, which returns Connection to us.
    In the method, we form a string for accessing the DBMS:
 
-`String dbUrl = String.format("%s%s?user=%s&password=%s", DB_ADDRESS, DB_NAME, DB_USERNAME, DB_PASSWORD );`
+`String dbUrl = String.format("%s%s?user_task=%s&password=%s", DB_ADDRESS, DB_NAME, DB_USERNAME, DB_PASSWORD );`
 
 2. For ease of working with connection attributes, we create a constants package and create a Constants interface in it, in which we set all the constants required for the connection:
    ` String DB_DRIVER_PATH = "org.postgresql.Driver";
@@ -35,7 +35,7 @@ What does JDBC provide us?
 
 3. Connect the PostgreSQL DBMS driver to pom.xml - this is the Maven configuration file, add a dependency.
 
-4. Create the cars_db database, add cars to it using BeeKeeper Studio.
+4. Create the cars_db database, add carNews to it using BeeKeeper Studio.
    We check the query for adding a car to the table:
    INSERT INTO car (brand, price, year) VALUES ('%s', '%s', %d;
 
@@ -61,7 +61,7 @@ What does JDBC provide us?
 ## Topic of today's lesson:
 ### Reinforcing skills in working with JDBC
 * Method of reading from the database of one car
-* Method of getting from the database of all cars
+* Method of getting from the database of all carNews
 * Update, Delete - by analogy
 
 ### HIBERNATE Technology
@@ -90,7 +90,7 @@ singleton - это ...
 1. Создаем CarRepositoryDB, в нем делаем метод getConnection, который нам возвращает Connection.
 В методе формируем строку обращения к СУБД:
 
-`String dbUrl = String.format("%s%s?user=%s&password=%s", DB_ADDRESS, DB_NAME, DB_USERNAME, DB_PASSWORD );`
+`String dbUrl = String.format("%s%s?user_task=%s&password=%s", DB_ADDRESS, DB_NAME, DB_USERNAME, DB_PASSWORD );`
 
 2. Для удобства работы с атрибутами подключения создаем пакет constants и в нем создаем интерфейс Constants, в котором задаем все требуемые лоя подключения константы:
 `   String DB_DRIVER_PATH = "org.postgresql.Driver";

@@ -8,13 +8,18 @@
 JDBC (Java Database Connectivity) is a standard Java API for interacting with databases. JDBC plays a critical role in Java applications, allowing them to query and update databases, and retrieve the results of those queries.
 
 **Code example:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user_task", "password");
 Statement stmt = conn.createStatement();
 ResultSet rs = stmt.executeQuery("SELECT * FROM mytable");
-while (rs.next()) {
-System.out.println(rs.getString("columnname"));
-}
+while(rs.
+
+next()){
+        System.out.
+
+println(rs.getString("columnname"));
+        }
 ```
 
 ---
@@ -32,18 +37,21 @@ Different DBMS, such as Oracle, MySQL, PostgreSQL, have their own unique feature
 **Code examples:**
 
 **Oracle:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:mydb", "user_task", "password");
 ```
 
 **MySQL:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user_task", "password");
 ```
 
 **PostgreSQL:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/mydb", "user_task", "password");
 ```
 
 ---
@@ -226,13 +234,18 @@ Data types - https://www.postgresql.org/docs/current/datatype.html
 JDBC (Java Database Connectivity) является стандартным Java API для взаимодействия с базами данных. JDBC играет критически важную роль в Java-приложениях, позволяя им выполнять запросы и обновления в базах данных, а также получать результаты этих запросов.
 
 **Пример кода:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user_task", "password");
 Statement stmt = conn.createStatement();
 ResultSet rs = stmt.executeQuery("SELECT * FROM mytable");
-while (rs.next()) {
-    System.out.println(rs.getString("columnname"));
-}
+while(rs.
+
+next()){
+        System.out.
+
+println(rs.getString("columnname"));
+        }
 ```
 
 ---
@@ -250,18 +263,21 @@ while (rs.next()) {
 **Примеры кода:**
 
 **Oracle:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:mydb", "user_task", "password");
 ```
 
 **MySQL:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "user_task", "password");
 ```
 
 **PostgreSQL:**
+
 ```java
-Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/mydb", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/mydb", "user_task", "password");
 ```
 
 ---
