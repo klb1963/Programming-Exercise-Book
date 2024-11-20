@@ -5,22 +5,30 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.HashSet;
+import java.util.Set;
 
 public class RestoreEmployeeAppl {
+
+    static Set<Employee> employeeSet = new HashSet<>();
+
     public static void main(String[] args) {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("./dest/employees.dat"))) {
-            // deserializing from stream of bytes to object
-            HashSet<Employee> employees = (HashSet<Employee>) ois.readObject(); // кастинг
 
-            employees.forEach(System.out::println); // рапечатали
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("employee.dat"))) {
 
-        } catch (
-                FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            employeeSet = (Set<Employee>) ois.readObject();
+            // Используем Stream API для вывода каждого сотрудника на новой строке
+            employeeSet.forEach(System.out::println);
+
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
+
+        System.out.println("-----------------------------------");
+
+        double totalSalary = employeeSet.stream()
+                .mapToDouble(Employee::getSalary)
+                .sum();
+        System.out.println(totalSalary);
+
     }
 }

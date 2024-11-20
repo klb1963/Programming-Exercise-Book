@@ -1,11 +1,12 @@
-package todolist_file.dao;
+package todolist.dao;
 
-import todolist_file.model.Task;
+import todolist.model.Task;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class ToDoListImpl implements ToDoList, Serializable {
 
@@ -23,7 +24,7 @@ public class ToDoListImpl implements ToDoList, Serializable {
 
     @Override
     public boolean addTask(Task task) {
-        if (task == null) {
+        if (task == null || tasks.contains(task)) {
             return false;
         }
         tasks.add(task);
@@ -49,10 +50,18 @@ public class ToDoListImpl implements ToDoList, Serializable {
     @Override
     public void viewTasks() {
         // for loop, print tasks & quantity
-        for (Task t : tasks) {
-            System.out.println((tasks.indexOf(t) + 1) + ". " + t);
-        }
+//        for (Task t : tasks) {
+//            System.out.println((tasks.indexOf(t) + 1) + ". " + t);
+//        }
+        // -----------------------------
+        // а как распечатать с помощью stream()?
+        IntStream.range(0, tasks.size())
+                .forEach(i -> System.out.println((i + 1) + ". " + tasks.get(i)));
+
+        System.out.println("---------------------------------");
+
         System.out.println("You have " + quantity + " tasks.");
+
     }
 
     @Override

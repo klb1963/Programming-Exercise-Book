@@ -9,7 +9,8 @@ import java.util.function.Predicate;
 import supermarket.ait.supermarket.model.Product;
 
 
-public class SupermarketImpl implements Supermarket {
+public class SupermarketImpl implements Supermarket
+{
 	private Collection<Product> products = new ArrayList<>();
 
 	@Override

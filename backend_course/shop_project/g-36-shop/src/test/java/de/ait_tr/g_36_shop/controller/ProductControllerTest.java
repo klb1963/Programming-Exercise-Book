@@ -45,12 +45,12 @@ class ProductControllerTest {
     private final String ADMIN_ROLE_TITLE = "ROLE_ADMIN"; //
     private final String USER_ROLE_TITLE = "ROLE_USER"; //
 
-    private final String TEST_PRODUCT_TITLE = "Test product";
+    private final String TEST_PRODUCT_TITLE = "Product product";
     private final BigDecimal TEST_PRODUCT_PRICE = new BigDecimal(99);
 
-    private final String TEST_ADMIN_NAME = "Test Admin";
-    private final String TEST_USER_NAME = "Test User";
-    private final String TEST_PASSWORD = "Test password";
+    private final String TEST_ADMIN_NAME = "Product Admin";
+    private final String TEST_USER_NAME = "Product User";
+    private final String TEST_PASSWORD = "Product password";
 
     // constants for login to server
     private final String URL_PREFIX = "http://localhost:";

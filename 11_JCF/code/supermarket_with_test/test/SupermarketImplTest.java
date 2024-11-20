@@ -2,9 +2,9 @@ package supermarket_with_test.test;
 
 import supermarket_with_test.dao.Supermarket;
 import supermarket_with_test.dao.SupermarketImpl;
-import supermarket_with_test.model.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import supermarket_with_test.model.Product;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

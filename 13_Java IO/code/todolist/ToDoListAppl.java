@@ -1,8 +1,8 @@
-package todolist_file;
+package todolist;
 
-import todolist_file.dao.ToDoListImpl;
-import todolist_file.model.Menu;
-import todolist_file.model.Task;
+import todolist.dao.ToDoListImpl;
+import todolist.model.Menu;
+import todolist.model.Task;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -59,7 +59,6 @@ public class ToDoListAppl implements Serializable{
                 }
                 case 5:{
                     System.out.println("Loading... ");
-
                     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("./dest/todolist.dat"))) {
                         List<Task> readTasks = (List<Task>) ois.readObject();
                         System.out.println("Прочитанный список: " + readTasks);

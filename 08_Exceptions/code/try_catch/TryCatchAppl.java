@@ -42,5 +42,6 @@ public class TryCatchAppl {
         } catch (Exception e) {
             System.out.println(e.toString() + ", " + e.getMessage() + ", " + e.getCause() + " Wrong input");
         }
+
     }
 }

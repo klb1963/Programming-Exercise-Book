@@ -1,6 +1,6 @@
-package todolist_file.dao;
+package todolist.dao;
 
-import todolist_file.model.Task;
+import todolist.model.Task;
 
 import java.util.List;
 
@@ -14,4 +14,5 @@ public interface ToDoList {
     List<Task> getAllTasks(); // взять весь список
     // quantity of tasks
     int quantity();
+
 }

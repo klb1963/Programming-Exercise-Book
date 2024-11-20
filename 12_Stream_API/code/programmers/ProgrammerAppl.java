@@ -40,7 +40,7 @@ public class ProgrammerAppl {
                 .distinct()
                 .forEach(System.out::println);
 
-        System.out.println("========== Grouping By Programmers ===========");
+        System.out.println("========== Grouping By Programmer ===========");
         Map<String, Long> techFrequency = programmers.stream()
                 .map(Programmer::getTechnologies)
                 .flatMap(Arrays::stream)
@@ -48,12 +48,6 @@ public class ProgrammerAppl {
 
         System.out.println(techFrequency);
 
-        Long max = techFrequency.values().stream()
-                .max(Long::compare).orElse(0L);
-
-        techFrequency.entrySet().stream()
-                .filter(e -> max.equals(e.getValue())) // взяли только тех, у кого = max
-                .forEach(e -> System.out.println(e.getKey()));
     }
 
     private static void printMostSkilledProgrammers(List<Programmer> programmers) {

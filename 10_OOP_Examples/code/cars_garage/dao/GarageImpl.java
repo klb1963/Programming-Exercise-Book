@@ -5,6 +5,7 @@ import cars_garage.model.Car;
 import java.util.function.Predicate;
 
 public class GarageImpl implements Garage {
+
     private Car[] cars;
     private int size;
 
